@@ -34,7 +34,6 @@ router.post('/register',[
     body('name').not().isEmpty(),
     body('surname').not().isEmpty(),
     body('username').not().isEmpty(),
-    body('pbr').not().isEmpty(),
     body('email').isEmail(),
     body('password').isLength({min: 8})
 ], handleRegister);
